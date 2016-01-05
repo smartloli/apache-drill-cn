@@ -11,6 +11,6 @@ Chinese translation of [Apache Drill 1.4 Reference Manual](http://drill.apache.o
 
 # Contact:
 * Blog : http://www.cnblogs.com/smartloli/
-* Gmail: smartdengjie@gmail.com
+* Gmail: [smartdengjie@gmail.com](smartdengjie@gmail.com)
 * Twitter : [smartloli](https://twitter.com/smartloli)
 * Github : [smartloli](https://github.com/smartloli)
