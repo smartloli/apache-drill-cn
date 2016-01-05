@@ -1,5 +1,5 @@
 # apache-drill-cn
-![Drill LOGO](http://drill.apache.org/images/apachedrill.png)
+![Drill LOGO](res/apachedrill.png)
 
 Chinese translation of [Apache Drill 1.4 Reference Manual](http://drill.apache.org/docs/) and the other article collection. The laset version of Apache Drill is 1.4. You can also see the demos of the reference at https://github.com/smartloli/apache-drill-cn.git. There is also a GitBook version of the book:(). Let's READ!
 
