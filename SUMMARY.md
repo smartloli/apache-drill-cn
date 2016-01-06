@@ -13,6 +13,14 @@
    * [1.Tutorials Introduction 教程介绍](3.教程/1.Tutorials Introduction 教程介绍.md)
    * [2.Drill in 10 Minutes 快速指导](3.教程/2.Drill in 10 Minutes 快速指导.md)
    * [3.A-Y-A-D 数据集分析](3.教程/3.A-Y-A-D 数据集分析.md)
-   * 4.
-       * [1.](1.md)
-
+   * 4.在 MapR 的 Sandbox 中学习 Drill
+       * [1.关于 MapR 的 Sandbox](3.教程/4.在 MapR 的 Sandbox 中学习 Drill/1.关于 MapR 的 Sandbox.md)
+       * [2.在 Sandbox 中安装 Drill](3.教程/4.在 MapR 的 Sandbox 中学习 Drill/2.在 Sandbox 中安装 Drill.md)
+       * [3.在 Sandbox 中使用 Drill](3.教程/4.在 MapR 的 Sandbox 中学习 Drill/3.在 Sandbox 中使用 Drill.md)
+       * [4.课程1:学习数据集](3.教程/4.在 MapR 的 Sandbox 中学习 Drill/4.课程1:学习数据集.md)
+       * [5.课程2:使用 ANSI SQL 查询](3.教程/4.在 MapR 的 Sandbox 中学习 Drill/5.课程2:使用 ANSI SQL 查询.md)
+       * [6.课程3:查询复杂的数据类型](3.教程/4.在 MapR 的 Sandbox 中学习 Drill/6.课程3:查询复杂的数据类型.md)
+   * [5.总结](3.教程/5.总结.md)
+   * [6.高度动态的数据集分析](3.教程/6.高度动态的数据集分析.md)
+   * [7.社会媒体分析](3.教程/7.社会媒体分析.md)
+   * [8.使用窗口函数分析数据](3.教程/8.使用窗口函数分析数据.md)
