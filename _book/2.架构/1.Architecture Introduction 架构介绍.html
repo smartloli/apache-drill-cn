@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>1.Introduction 介绍 | apache-drill-cn</title>
+        <title>1.Architecture Introduction 架构介绍 | apache-drill-cn</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.6">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../1.开始/2.Why Drill 为什么使用 Drill.html" />
+    <link rel="next" href="../2.架构/2.Drill Query Execution Drill 查询执行.html" />
     
     
-    <link rel="prev" href="../index.html" />
+    <link rel="prev" href="../1.开始/2.Why Drill 为什么使用 Drill.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="1.1"
-        data-chapter-title="1.Introduction 介绍"
-        data-filepath="1.开始/1.Introduction 介绍.md"
+        data-level="2.1"
+        data-chapter-title="1.Architecture Introduction 架构介绍"
+        data-filepath="2.架构/1.Architecture Introduction 架构介绍.md"
         data-basepath=".."
         data-revision="Thu Jan 07 2016 15:50:48 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -90,7 +90,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.1" data-path="1.开始/1.Introduction 介绍.html">
+        <li class="chapter " data-level="1.1" data-path="1.开始/1.Introduction 介绍.html">
             
                 
                     <a href="../1.开始/1.Introduction 介绍.html">
@@ -133,7 +133,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1" data-path="2.架构/1.Architecture Introduction 架构介绍.html">
+        <li class="chapter active" data-level="2.1" data-path="2.架构/1.Architecture Introduction 架构介绍.html">
             
                 
                     <a href="../2.架构/1.Architecture Introduction 架构介绍.html">
@@ -420,74 +420,29 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="drill&#x4ECB;&#x7ECD;">Drill&#x4ECB;&#x7ECD;</h1>
-<p>Drill &#x662F; Apache &#x5F00;&#x6E90;&#x7684;&#xFF0C;&#x7528;&#x4E8E;&#x5927;&#x6570;&#x636E;&#x63A2;&#x7D22;&#x7684; SQL &#x67E5;&#x8BE2;&#x5F15;&#x64CE;&#x3002;&#x5979;&#x5728;&#x5927;&#x6570;&#x636E;&#x5E94;&#x7528;&#x4E2D;&#xFF0C;&#x9762;&#x5BF9;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x548C;&#x53D8;&#x5316;&#x8FC5;&#x901F;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5979;&#x80FD;&#x591F;&#x53BB;&#x517C;&#x5BB9;&#xFF0C;&#x5E76;&#x4E14;&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x53BB;&#x5206;&#x6790;&#xFF0C;&#x540C;&#x65F6;&#xFF0C;&#x8FD8;&#x63D0;&#x4F9B;&#x4E1A;&#x754C;&#x90FD;&#x719F;&#x6089;&#x7684;&#x6807;&#x51C6;&#x7684;&#x67E5;&#x8BE2;&#x8BED;&#x8A00;&#xFF0C;&#x5373;&#xFF1A;ANSI SQL &#x751F;&#x6001;&#x7CFB;&#x7EDF;&#x3002;Drill &#x63D0;&#x4F9B;&#x5373;&#x63D2;&#x5373;&#x7528;&#xFF0C;&#x5728;&#x73B0;&#x6709;&#x7684; Hive &#x548C; HBase&#x4E2D;&#x53EF;&#x4EE5;&#x968F;&#x65F6;&#x6574;&#x5408;&#x90E8;&#x7F72;&#x3002;</p>
-<h2 id="apache-drill-13-&#x548C;-14-&#x7684;&#x65B0;&#x7279;&#x6027;&#xFF1F;">Apache Drill 1.3 &#x548C; 1.4 &#x7684;&#x65B0;&#x7279;&#x6027;&#xFF1F;</h2>
-<p>&#x8FD9;&#x4E9B;&#x7248;&#x672C;&#x4FEE;&#x590D;&#x4E86;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#x5E76;&#x4E14;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E9B;&#x6539;&#x8FDB;&#xFF0C;&#x5185;&#x5BB9;&#x5305;&#x542B;&#x4E00;&#x4E0B;&#x51E0;&#x70B9;&#xFF1A;</p>
+                        <h1 id="&#x67B6;&#x6784;&#x4ECB;&#x7ECD;">&#x67B6;&#x6784;&#x4ECB;&#x7ECD;</h1>
+<p>Apache Drill &#x662F;&#x4E00;&#x4E2A;&#x4F4E;&#x5EF6;&#x8FDF;&#x7684;&#x5927;&#x578B;&#x6570;&#x636E;&#x96C6;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x67E5;&#x8BE2;&#x5F15;&#x64CE;&#xFF0C;&#x5305;&#x62EC;&#x7ED3;&#x6784;&#x5316;&#x548C;&#x534A;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;/&#x5D4C;&#x5957;&#x3002;&#x5176;&#x7075;&#x611F;&#x6765;&#x81EA;&#x4E8E;&#x8C37;&#x6B4C;&#x7684; Dremel&#xFF0C;Drill &#x7684;&#x8BBE;&#x8BA1;&#x89C4;&#x6A21;&#x4E3A;&#x4E0A;&#x5343;&#x53F0;&#x8282;&#x70B9;&#x5E76;&#x4E14;&#x80FD;&#x4E0E; BI &#x6216;&#x5206;&#x6790;&#x73AF;&#x5883;&#x4E92;&#x52A8;&#x67E5;&#x8BE2;&#x3002;</p>
+<p>&#x5728;&#x5927;&#x578B;&#x6570;&#x636E;&#x96C6;&#x4E0A;&#xFF0C;Drill &#x8FD8;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x77ED;&#xFF0C;&#x4EA4;&#x4E92;&#x5F0F;&#x7684;&#x4E34;&#x65F6;&#x67E5;&#x8BE2;&#x3002;Drill &#x80FD;&#x591F;&#x7528;&#x4E8E;&#x5D4C;&#x5957;&#x67E5;&#x8BE2;&#xFF0C;&#x50CF; JSON &#x683C;&#x5F0F;&#xFF0C;Parquet &#x683C;&#x5F0F;&#x4EE5;&#x53CA;&#x52A8;&#x6001;&#x7684;&#x6267;&#x884C;&#x67E5;&#x8BE2;&#x3002;Drill &#x4E0D;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x96C6;&#x4E2D;&#x7684;&#x5143;&#x6570;&#x636E;&#x4ED3;&#x5E93;&#x3002;</p>
+<h2 id="&#x9AD8;&#x7EA7;&#x67B6;&#x6784;">&#x9AD8;&#x7EA7;&#x67B6;&#x6784;</h2>
+<p>Drill&#x5305;&#x62EC;&#x5206;&#x5E03;&#x5F0F;&#x6267;&#x884C;&#x73AF;&#x5883;&#xFF0C;&#x76EE;&#x7684;&#x7528;&#x4E8E;&#x5927;&#x89C4;&#x6A21;&#x6570;&#x636E;&#x5904;&#x7406;&#x3002;&#x5728; Apache Drill &#x7684;&#x6838;&#x5FC3;&#x670D;&#x52A1;&#x662F; &quot;Drillbit&quot;&#xFF0C;&#x5979;&#x8D1F;&#x8D23;&#x63A5;&#x53D7;&#x6765;&#x81EA;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x3002;</p>
+<p>Drillbit &#x670D;&#x52A1;&#x80FD;&#x591F;&#x5B89;&#x88C5;&#x5728;&#x5E76;&#x8FD0;&#x884C;&#x5728; Hadoop &#x96C6;&#x7FA4;&#x4E0A;&#x3002;&#x5F53; Drillbit &#x8FD0;&#x884C;&#x5728;&#x96C6;&#x7FA4;&#x7684;&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x8282;&#x70B9;&#x4E0A;&#x65F6;&#xFF0C;&#x80FD;&#x591F;&#x6700;&#x5927;&#x5316;&#x53BB;&#x6267;&#x884C;&#x67E5;&#x8BE2;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x7F51;&#x7EDC;&#x6216;&#x662F;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x79FB;&#x52A8;&#x6570;&#x636E;&#x3002;Drill &#x4F7F;&#x7528; ZooKeeper &#x6765;&#x7EF4;&#x62A4;&#x96C6;&#x7FA4;&#x7684;&#x5065;&#x5EB7;&#x72B6;&#x6001;&#x3002;</p>
+<p>&#x867D;&#x7136; Drill &#x5DE5;&#x4F5C;&#x4E8E; Hadoop &#x96C6;&#x7FA4;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x4F46;&#x662F; Drill &#x4E0D;&#x4F9D;&#x8D56; Hadoop&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x5728;&#x4EFB;&#x4F55;&#x5206;&#x5E03;&#x5F0F;&#x96C6;&#x7FA4;&#x73AF;&#x5883;&#x4E0B;&#x3002;&#x552F;&#x4E00;&#x7684;&#x5148;&#x51B3;&#x6761;&#x4EF6;&#x5C31;&#x662F;&#x9700;&#x8981; ZooKeeper&#x3002;</p>
+<h2 id="drill-&#x5BA2;&#x6237;&#x7AEF;">Drill &#x5BA2;&#x6237;&#x7AEF;</h2>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x63A5;&#x53E3;&#x6765;&#x8BBF;&#x95EE; Drill&#xFF1A;</p>
 <ul>
-<li>&#x652F;&#x6301; Amazon S3&#x3002;</li>
-<li>&#x7C7B;&#x578B;&#x591A;&#x6837;&#x5316;
-&#x652F;&#x6301;&#x4ECE;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x6F14;&#x53D8;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x5217;&#x3002;</li>
-<li>&#x6587;&#x672C;&#x6587;&#x4EF6;&#x7684;header&#x3002;</li>
-<li>&#x652F;&#x6301;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x3002;</li>
-<li>&#x589E;&#x5F3A;&#x67E5;&#x8BE2; Hive &#x8868;&#xFF0C;MongoDB&#x96C6;&#x5408;&#x4EE5;&#x53CA; Avro &#x6587;&#x4EF6;&#x3002;</li>
+<li>Drill Shell</li>
+<li>Drill Web Console</li>
+<li>ODBC/JDBC</li>
+<li>C++ API</li>
 </ul>
-<h2 id="apache-drill-12-&#x7684;&#x65B0;&#x7279;&#x6027;&#xFF1F;">Apache Drill 1.2 &#x7684;&#x65B0;&#x7279;&#x6027;&#xFF1F;</h2>
-<p>&#x8FD9;&#x4E9B;&#x7248;&#x672C;&#x4FEE;&#x590D;&#x4E86;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#x5E76;&#x4E14;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E9B;&#x6539;&#x8FDB;&#xFF0C;&#x5185;&#x5BB9;&#x5305;&#x542B;&#x4E00;&#x4E0B;&#x51E0;&#x70B9;&#xFF1A;</p>
-<ul>
-<li>&#x652F;&#x6301; JDBC &#x6570;&#x636E;&#x6E90;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;MySQL&#xFF0C;&#x901A;&#x8FC7;&#x65B0;&#x7684; JDBC &#x5B58;&#x50A8;&#x63D2;&#x4EF6;&#x3002;</li>
-<li>&#x6539;&#x8FDB; Drill &#x7684; JDBC &#x9A71;&#x52A8;&#xFF0C;&#x5305;&#x542B; Javadocs &#x548C;&#x5176;&#x517C;&#x5BB9;&#x6027;&#x3002;</li>
-<li>&#x6539;&#x5584; Avro &#x6587;&#x4EF6;&#x7684;&#x683C;&#x5F0F;<ul>
-<li>&#x652F;&#x6301;&#x590D;&#x6742;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;UNION &#x548C; MAP&#x3002;</li>
-<li>&#x4F18;&#x5316; Avro &#x6587;&#x4EF6;&#x7684;&#x5904;&#x7406;&#xFF08;block-wise&#xFF09;&#x3002;</li>
-</ul>
-</li>
-<li>&#x5206;&#x533A;&#x4FEE;&#x6539;&#x6539;&#x8FDB;&#x3002;</li>
-<li>&#x4E00;&#x6279;&#x65B0;&#x7684; SQL &#x7A97;&#x53E3;&#x51FD;&#x6570;<ul>
-<li>NTILE</li>
-<li>LAG &#x548C; LEAD</li>
-<li>FIRST_VALUE &#x548C; LAST_VALUE</li>
-</ul>
-</li>
-<li>HTTPS &#x652F;&#x6301; Web Console&#x7684;&#x64CD;&#x4F5C;</li>
-<li>&#x63D0;&#x9AD8; HBASE &#x7684;&#x67E5;&#x8BE2;&#x6027;&#x80FD;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x547D;&#x4EE4;&#x5B57;&#x8282;&#x7F16;&#x7801;</li>
-<li>&#x4F18;&#x5316;&#x8BFB;&#x53D6; Parquet-backed&#xFF0C;Hive &#x8868;</li>
-<li>&#x5728; Hive &#x548C; Impala&#x4E2D;&#x4F7F;&#x7528; CONVERT_FROM &#x51FD;&#x6570;&#x89E3;&#x7801; timestamp &#x65F6;&#xFF0C;&#x8BFB;&#x7684;&#x65F6;&#x5019;&#x652F;&#x6301; Parquet INT96 &#x7C7B;&#x578B;&#x548C;&#x65B0;&#x7684;  TIMESTAMP_IMPALA &#x7C7B;&#x578B;</li>
-<li>Parquet &#x7684;&#x5143;&#x6570;&#x636E;&#x7F13;&#x5B58;&#x7528;&#x6765;&#x63D0;&#x9AD8;&#x5BF9;&#x5927;&#x91CF;&#x6587;&#x4EF6;&#x7684;&#x67E5;&#x8BE2;&#x6027;&#x80FD;</li>
-<li>DROP TABLE &#x547D;&#x4EE4;</li>
-<li>&#x6539;&#x8FDB;&#x7684;&#x76F8;&#x5173;&#x5B50;&#x67E5;&#x8BE2;</li>
-<li>Union Distinct</li>
-<li>&#x6539;&#x8FDB; LIMIT &#x7684;&#x5904;&#x7406;&#x8FC7;&#x7A0B;</li>
-</ul>
-<h2 id="apache-drill-11-&#x7684;&#x65B0;&#x7279;&#x6027;&#xFF1F;">Apache Drill 1.1 &#x7684;&#x65B0;&#x7279;&#x6027;&#xFF1F;</h2>
-<p>&#x5728; Apache Drill 1.1 &#x4E2D;&#x6539;&#x5584;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5173;&#x952E;&#x70B9;&#x6709;&#x4EE5;&#x4E0B;&#xFF1A;</p>
-<ul>
-<li>SQL &#x7684;&#x7A97;&#x53E3;&#x51FD;&#x6570;</li>
-<li>&#x5728; CTAS &#x547D;&#x4EE4;&#x4E2D;&#xFF0C;&#x6570;&#x636E;&#x5206;&#x533A;&#x4F7F;&#x7528;&#x65B0;&#x7684;&#x5206;&#x533A;</li>
-<li>&#x6388;&#x4E88; Hive &#x6A21;&#x62DF;&#x529F;&#x80FD;</li>
-<li>&#x652F;&#x6301; UNION &#x548C; UNION ALL &#x4EE5;&#x53CA;&#x66F4;&#x4F18;&#x5316;&#x7684;&#x8BA1;&#x5212;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B; UNION</li>
-</ul>
-<h2 id="apache-drill-10-&#x7684;&#x65B0;&#x7279;&#x6027;&#xFF1F;">Apache Drill 1.0 &#x7684;&#x65B0;&#x7279;&#x6027;&#xFF1F;</h2>
-<p>Apache Drill 1.0 &#x63D0;&#x4F9B;&#x4EE5;&#x4E0B;&#x65B0;&#x7279;&#x6027;&#xFF1A;</p>
-<ul>
-<li>&#x5BF9;&#x591A;&#x79CD;&#x6267;&#x884C;&#x8BA1;&#x5212;&#x8FDB;&#x884C;&#x6539;&#x8FDB;&#x3002;</li>
-<li>&#x66F4;&#x65B0; Drill Shell&#xFF0C;&#x683C;&#x5F0F;&#x5316;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x3002;</li>
-<li>&#x5728; Drillbit &#x4E0A;&#x83B7;&#x53D6;&#x67E5;&#x8BE2;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x8981;&#x901A;&#x8FC7;&#x65E5;&#x5FD7;&#x5BA1;&#x6838;&#x3002;</li>
-<li>&#x6539;&#x8FDB;&#x8FDE;&#x63A5;&#x5904;&#x7406;&#x3002;</li>
-<li>&#x5728; Web UI &#x754C;&#x9762;&#xFF0C;&#x6DFB;&#x52A0;&#x65B0;&#x7684; Tab &#x680F; Profiles&#xFF0C;&#x4FBF;&#x4E8E;&#x6545;&#x969C;&#x6392;&#x9664;&#x548C;&#x5206;&#x5E03;&#x5F0F;&#x5B58;&#x50A8;&#x3002;</li>
-<li>&#x652F;&#x6301;&#x65B0;&#x7684;&#x5B58;&#x50A8;&#x63D2;&#x4EF6;&#x8F93;&#x5165;&#x683C;&#x5F0F;&#xFF1A;Avro&#x3002;
-&#x5728;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x4E2D;&#xFF0C;Drill &#x7981;&#x7528;&#x4E86; DECIMAL &#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x5305;&#x542B;&#x8F6C;&#x6362;&#x6210; DECIMAL &#x548C;&#x8BFB;&#x53D6; DECIMAL &#x7C7B;&#x578B;&#x4ECE; Parquet &#x548C; Hive &#x4E2D;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x542F;&#x52A8; DECIMAL &#x7C7B;&#x578B;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x63A8;&#x8350;&#x4F60;&#x8FD9;&#x4E48;&#x505A;&#x3002;</li>
-</ul>
-<h2 id="apache-drill-&#x5173;&#x952E;&#x7279;&#x6027;">Apache Drill &#x5173;&#x952E;&#x7279;&#x6027;</h2>
-<p>Apache Drill &#x7684;&#x5173;&#x952E;&#x7279;&#x6027;&#x5982;&#x4E0B;&#xFF1A;</p>
-<ul>
-<li>&#x4F4E;&#x5EF6;&#x65F6;&#x7684; SQL &#x67E5;&#x8BE2;&#x3002;</li>
-<li>&#x52A8;&#x6001;&#x67E5;&#x8BE2;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x6587;&#x4EF6;&#xFF08;&#x4F8B;&#x5982;&#xFF1A;JSON&#xFF0C;Parquet&#xFF0C;text&#xFF09;&#x548C; HBase &#x8868;&#x4E2D;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5728; Hive &#x5143;&#x6570;&#x636E;&#x4E2D;&#x5B9A;&#x4E49;&#x3002;</li>
-<li>ANSI SQL</li>
-<li>&#x652F;&#x6301;&#x6570;&#x636E;&#x5D4C;&#x5957;&#x3002;</li>
-<li>&#x6574;&#x5408; Apache Hive&#xFF08;&#x67E5;&#x8BE2; Hive &#x8868;&#x548C;&#x89C6;&#x56FE;&#xFF0C;&#x652F;&#x6301;&#x6240;&#x6709; Hive &#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x548C; Hive &#x7684; UDFS&#xFF09;&#x3002;</li>
-<li>&#x4F7F;&#x7528;&#x6807;&#x51C6;&#x7684; JDBC &#x548C; ODBC &#x9A71;&#x52A8;&#x6574;&#x5408; BI &#x548C; SQL &#x5DE5;&#x5177;&#x3002;</li>
-</ul>
+<h2 id="&#x52A8;&#x6001;&#x53D1;&#x73B0;-schema">&#x52A8;&#x6001;&#x53D1;&#x73B0; Schema</h2>
+<p>&#x5728;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x67E5;&#x8BE2;&#x5904;&#x7406;&#x7684;&#x65F6;&#x5019;&#xFF0C;Drill &#x4E0D;&#x9700;&#x8981;&#x4E3A;&#x89C4;&#x8303;&#x6570;&#x636E;&#x7684; Schema &#x548C;&#x7C7B;&#x578B;&#x3002;Drill &#x5F00;&#x59CB;&#x5904;&#x7406;&#x6570;&#x636E;&#x662F;&#x5728;&#x8BB0;&#x5F55;&#x6279;&#x5904;&#x7406;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5728;&#x5904;&#x7406;&#x8FC7;&#x7A0B;&#x4E2D;&#x53BB;&#x53D1;&#x73B0; Schema&#x3002;Drill &#x5229;&#x7528;&#x52A8;&#x6001;&#x67E5;&#x8BE2;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x53BB;&#x81EA;&#x5DF1;&#x63CF;&#x8FF0;&#x6570;&#x636E;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x4F8B;&#x5982; Parquet&#xFF0C;JSON&#xFF0C;AVRO &#x548C; NOSQL &#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5C06;&#x5B83;&#x4EEC;&#x6307;&#x5B9A;&#x4E3A;&#x6570;&#x636E;&#x672C;&#x8EAB;&#x7684;&#x683C;&#x5F0F;&#x3002;&#x56E0;&#x4E3A; Schema &#x53EF;&#x4EE5;&#x5728;&#x67E5;&#x8BE2;&#x8FC7;&#x7A0B;&#x4E2D;&#x53D8;&#x5316;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5F88;&#x597D;&#x7684;&#x53BB;&#x62E5;&#x62B1; Schema &#x7684;&#x53D8;&#x5316;&#xFF0C;&#x80FD;&#x591F;&#x91CD;&#x65B0;&#x8C03;&#x6574;&#x6765;&#x5E94;&#x5BF9; Schema &#x7684;&#x53D8;&#x5316;&#x3002;</p>
+<h2 id="&#x7075;&#x6D3B;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;">&#x7075;&#x6D3B;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;</h2>
+<p>Drill &#x5141;&#x8BB8;&#x6570;&#x636E;&#x5C5E;&#x6027;&#x5D4C;&#x5957;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x4E86;&#x76F4;&#x89C2;&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x800C;&#x4E14;&#x5F88;&#x5BB9;&#x6613;&#x53BB;&#x64CD;&#x4F5C;&#x5B83;&#x4EEC;&#x3002;&#x4ECE;&#x67B6;&#x6784;&#x7684;&#x89D2;&#x5EA6;&#x6765;&#x770B;&#xFF0C;Drill &#x63D0;&#x4F9B;&#x4E86;&#x7075;&#x6D3B;&#x7684;&#x67F1;&#x72B6;&#x6570;&#x636E;&#x6A21;&#x578B;&#xFF0C;&#x5979;&#x80FD;&#x591F;&#x5448;&#x73B0;&#x590D;&#x6742;&#x7684;&#xFF0C;&#x9AD8;&#x52A8;&#x6001;&#x7684;&#x548C;&#x4E0D;&#x65AD;&#x53D8;&#x5316;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#x3002;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5728; Drill &#x4E2D;&#x80FD;&#x591F;&#x88AB;&#x8F6C;&#x5316;&#x4E3A;&#x7279;&#x6B8A;&#x7684;&#x6216;&#x662F;&#x590D;&#x6742;/&#x534A;&#x7ED3;&#x6784;&#x5316;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<h2 id="&#x65E0;&#x96C6;&#x4E2D;&#x5F0F;&#x7684;&#x5143;&#x6570;&#x636E;">&#x65E0;&#x96C6;&#x4E2D;&#x5F0F;&#x7684;&#x5143;&#x6570;&#x636E;</h2>
+<p>Drill &#x6CA1;&#x6709;&#x96C6;&#x4E2D;&#x5F0F;&#x7684;&#x5143;&#x6570;&#x636E;&#x8981;&#x6C42;&#x3002;&#x4F60;&#x4E0D;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x548C;&#x7BA1;&#x7406;&#x8868;&#x548C;&#x89C6;&#x56FE;&#x5728;&#x5143;&#x6570;&#x636E;&#x4ED3;&#x5E93;&#x4E2D;&#xFF0C;&#x6216;&#x662F;&#x4EE5;&#x6765;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x5458;&#x7EC4;&#x8FD9;&#x6837;&#x7684;&#x529F;&#x80FD;&#x3002;Drill &#x7684;&#x5143;&#x6570;&#x636E;&#x6765;&#x6E90;&#x4E8E;&#x5BF9;&#x5E94;&#x7684;&#x5B58;&#x50A8;&#x63D2;&#x4EF6;&#x3002;&#x5B58;&#x50A8;&#x63D2;&#x4EF6;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x5982; Hive &#x7684;&#x5143;&#x6570;&#x636E;&#xFF0C;HBase &#x90E8;&#x5206;&#x7684;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x6216;&#x662F;&#x975E;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x5143;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x3002;&#x53BB;&#x96C6;&#x4E2D;&#x5316;&#x7684;&#x5143;&#x6570;&#x636E;&#x610F;&#x5473;&#x7740; Drill &#x4E0D;&#x4F9D;&#x8D56;&#x5355;&#x4E2A; Hive &#x4ED3;&#x5E93;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x53BB;&#x67E5;&#x8BE2;&#x591A;&#x4E2A; Hive &#x4ED3;&#x5E93;&#xFF0C;&#x5C06; HBase &#x8868;&#x6216;&#x662F;&#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5F53;&#x4E2D;&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x6574;&#x5408;&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5728; Drill &#x4E2D;&#x4F7F;&#x7528; SQL &#x7684; DDL &#x8BED;&#x53E5;&#x521B;&#x5EFA;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x4F7F;&#x5979;&#x770B;&#x4E0A;&#x53BB;&#x66F4;&#x50CF;&#x4F20;&#x7EDF;&#x7684;&#x6570;&#x636E;&#x5E93;&#x3002;Drill &#x7684;&#x5143;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; ANSI &#x6807;&#x51C6; INFORMATION_SCHEMA &#x6570;&#x636E;&#x5E93;&#x3002;</p>
+<h2 id="&#x53EF;&#x6269;&#x5C55;">&#x53EF;&#x6269;&#x5C55;</h2>
+<p>Drill &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x53EF;&#x6269;&#x5C55;&#x7684;&#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#xFF0C;&#x5305;&#x62EC;&#x5B58;&#x50A8;&#x63D2;&#x4EF6;&#xFF0C;&#x67E5;&#x8BE2;&#xFF0C;&#x67E5;&#x8BE2;&#x4F18;&#x5316;/&#x6267;&#x884C;&#xFF0C;&#x4EE5;&#x53CA;&#x5BA2;&#x6237;&#x7AEF;&#x63A5;&#x53E3;&#x5C42;&#x3002;&#x4F60;&#x80FD;&#x591F;&#x6309;&#x9700;&#x81EA;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5C42;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x8BE5;&#x5C42;&#x6839;&#x636E;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#x6269;&#x5C55;&#x7684;&#x66F4;&#x52A0;&#x5E7F;&#x6CDB;&#x3002;Drill &#x4F7F;&#x7528;&#x8DEF;&#x5F84;&#x626B;&#x63CF;&#x6765;&#x67E5;&#x627E;&#x548C;&#x52A0;&#x8F7D;&#x63D2;&#x4EF6;&#xFF0C;&#x5E76;&#x6DFB;&#x52A0;&#x989D;&#x5916;&#x7684;&#x5B58;&#x50A8;&#x63D2;&#x4EF6;&#xFF0C;&#x529F;&#x80FD;&#xFF0C;&#x548C;&#x6700;&#x5C0F;&#x7684;&#x914D;&#x7F6E;&#x64CD;&#x4F5C;&#x3002;</p>
 
                     
                     </section>
@@ -498,10 +453,10 @@
         </div>
 
         
-        <a href="../index.html" class="navigation navigation-prev " aria-label="Previous page: Introduction"><i class="fa fa-angle-left"></i></a>
+        <a href="../1.开始/2.Why Drill 为什么使用 Drill.html" class="navigation navigation-prev " aria-label="Previous page: 2.Why Drill 为什么使用 Drill"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../1.开始/2.Why Drill 为什么使用 Drill.html" class="navigation navigation-next " aria-label="Next page: 2.Why Drill 为什么使用 Drill"><i class="fa fa-angle-right"></i></a>
+        <a href="../2.架构/2.Drill Query Execution Drill 查询执行.html" class="navigation navigation-next " aria-label="Next page: 2.Drill Query Execution Drill 查询执行"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
