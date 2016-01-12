@@ -35,6 +35,6 @@
      * [5.在 Windows 上启动 Drill](4.安装 Drill/3.安装 Drill 到嵌入模式/5.在 Windows 上启动 Drill.md)
    * 4.安装 Drill 到分布式模式
      * [1.分布式模式的先决条件](4.安装 Drill/4.安装 Drill 到分布式模式/1.分布式模式的先决条件.md)
-     * [2.安装 Drill 在集群上](4.安装 Drill/4.安装 Drill 到分布式模式/2.安装 Drill 在集群上.md)
+     * [2.在集群上安装 Drill](4.安装 Drill/4.安装 Drill 到分布式模式/2.在集群上安装 Drill.md)
      * [3.在分布式模式下启动 Drill](4.安装 Drill/4.安装 Drill 到分布式模式/3.在分布式模式下启动 Drill.md)
    * [5.启动 Web 控制台](4.安装 Drill/5.启动 Web 控制台.md)
