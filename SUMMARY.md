@@ -26,13 +26,13 @@
    * [7.使用窗口函数分析数据](3.教程/7.使用窗口函数分析数据.md)
 * 4.安装 Drill
    * [1.Drill 安装介绍](4.安装 Drill/1.Drill 安装介绍.md)
-   * [2.迁移 Parquet 数据](4.安装/2.迁移 Parquet 数据.md)
+   * [2.迁移 Parquet 数据](4.安装 Drill/2.迁移 Parquet 数据.md)
    * [3.安装 Drill 到嵌入模式]
-     * [1.嵌入模式的先决条件](4.安装/3.安装 Drill 到嵌入模式/1.嵌入模式的先决条件.md)
-     * [2.安装 Drill 到 Linux 和 Mac OS X](4.安装/3.安装 Drill 到嵌入模式/2.安装 Drill 到 Linux 和 Mac OS X.md)
-     * [3.在 Linux 和 Mac OS X 上启动 Drill](4.安装/3.安装 Drill 到嵌入模式/3.在 Linux 和 Mac OS X 上启动 Drill.md)
-     * [4.在 Windows 上安装 Drill](4.安装/3.安装 Drill 到嵌入模式/4.在 Windows 上安装 Drill.md)
-     * [5.在 Windows 上启动 Drill](4.安装/3.安装 Drill 到嵌入模式/5.在 Windows 上启动 Drill.md)
+     * [1.嵌入模式的先决条件](4.安装 Drill/3.安装 Drill 到嵌入模式/1.嵌入模式的先决条件.md)
+     * [2.安装 Drill 到 Linux 和 Mac OS X](4.安装 Drill/3.安装 Drill 到嵌入模式/2.安装 Drill 到 Linux 和 Mac OS X.md)
+     * [3.在 Linux 和 Mac OS X 上启动 Drill](4.安装 Drill/3.安装 Drill 到嵌入模式/3.在 Linux 和 Mac OS X 上启动 Drill.md)
+     * [4.在 Windows 上安装 Drill](4.安装 Drill/3.安装 Drill 到嵌入模式/4.在 Windows 上安装 Drill.md)
+     * [5.在 Windows 上启动 Drill](4.安装 Drill/3.安装 Drill 到嵌入模式/5.在 Windows 上启动 Drill.md)
    * [4.安装 Drill 到分布式模式]
      * [1.分布式模式的先决条件](4.安装 Drill/4.安装 Drill 到分布式模式/1.分布式模式的先决条件.md)
      * [2.安装 Drill 在集群上](4.安装 Drill/4.安装 Drill 到分布式模式/2.安装 Drill 在集群上.md)
