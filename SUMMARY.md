@@ -69,3 +69,26 @@
   * [7.RDBMS 存储插件](6.连接数据源/7.RDBMS 存储插件.md)
   * [8.MongoDB 存储插件](6.连接数据源/8.MongoDB 存储插件.md)
   * [9.S3 存储插件](6.连接数据源/9.S3 存储插件.md)
+* 7.ODBC 和 JDBC 接口
+  * [1.介绍](7.ODBC 和 JDBC 接口/1.介绍.md)
+  * [2.使用 JDBC 驱动](7.ODBC 和 JDBC 接口/2.使用 JDBC 驱动.md)
+  * [3.在 Windows 上使用 JDBC 和 SQuirreL](7.ODBC 和 JDBC 接口/3.在 Windows 上使用 JDBC 和 SQuirreL.md)
+  * 4.安装 ODBC 驱动
+    * [1.在 Linux 上安装驱动](7.ODBC 和 JDBC 接口/4.安装 ODBC 驱动/1.在 Linux 上安装驱动.md)
+    * [2.在 Mac OS X 上安装驱动](7.ODBC 和 JDBC 接口/4.安装 ODBC 驱动/2.在 Mac OS X 上安装驱动.md)
+    * [3.在 Windows 上安装驱动](7.ODBC 和 JDBC 接口/4.安装 ODBC 驱动/3.在 Windows 上安装驱动.md)
+    * [4.在 Windows 上安装 TDC 文件](7.ODBC 和 JDBC 接口/4.安装 ODBC 驱动/4.在 Windows 上安装 TDC 文件.md)
+  * 5.配置 ODBC
+    * [1.ODBC 配置参考](7.ODBC 和 JDBC 接口/5.配置 ODBC/1.ODBC 配置参考.md)
+    * [2.在 Linux 上配置 ODBC](7.ODBC 和 JDBC 接口/5.配置 ODBC/2.在 Linux 上配置 ODBC3.在 Max OS X 上配置 ODBC.md)
+    * [3.在 Max OS X 上配置 ODBC](7.ODBC 和 JDBC 接口/5.配置 ODBC/3.在 Max OS X 上配置 ODBC.md)
+    * [4.在 Windows 上配置 ODBC](7.ODBC 和 JDBC 接口/5.配置 ODBC/4.在 Windows 上配置 ODBC.md)
+    * [5.测试 ODBC 连接](7.ODBC 和 JDBC 接口/5.配置 ODBC/5.测试 ODBC 连接.md)
+  * 6.使用 Drill
+    * [1.介绍](7.ODBC 和 JDBC 接口/6.使用 Drill/1.介绍.md)
+    * [2.连接 Drill 到数据源](7.ODBC 和 JDBC 接口/6.使用 Drill/2.连接 Drill 到数据源.md)
+    * [3.浏览数据和定义视图](7.ODBC 和 JDBC 接口/6.使用 Drill/3.浏览数据和定义视图.md)
+  * 7.用 BI 工具连接 Drill
+    * [1.介绍](7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/1.介绍.md)
+    * [2.使用 JDBC 驱动](7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/2.使用 JDBC 驱动.md)
+    * [3.在 Windows 上使用 JDBC 和 SQuirreL](7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/3.在 Windows 上使用 JDBC 和 SQuirreL.md)
