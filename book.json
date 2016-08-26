@@ -1,0 +1,32 @@
+{
+  "title": "Apache Drill",
+  "description": "Apache Drill 使用手册",
+  "author": "smartloli",
+  "generator": "site",
+  "language": "zh-hans",
+  "links": {
+    "sidebar": {
+      "Apache Drill": "http://drill.smartloli.org"
+    }
+  },
+  "plugins": [
+    "-disqus",
+    "-search",
+    "tbfed-pagefooter",
+    "baidu",
+    "-toggle-chapters"
+  ],
+  "pluginsConfig": {
+    "tbfed-pagefooter": {
+      "copyright": "Copyright &copy http://drill.smartloli.org 2016",
+      "modify_label": "Modify: ",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "baidu": {
+      "token": ""
+    },
+    "fontsettings": {
+      "size": 1
+    }
+  }
+}

@@ -1,0 +1,1742 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>6.社会媒体分析 | Apache Drill</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.6">
+        <meta name="author" content="smartloli">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../3.教程/7.使用窗口函数分析数据.html" />
+    
+    
+    <link rel="prev" href="../3.教程/5.高度动态的数据集分析.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="3.6"
+        data-chapter-title="6.社会媒体分析"
+        data-filepath="3.教程/6.社会媒体分析.md"
+        data-basepath=".."
+        data-revision="Fri Aug 26 2016 12:40:11 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+                
+                <li>
+                    <a href="http://drill.smartloli.org" target="blank" class="custom-link">Apache Drill</a>
+                </li>
+            
+            
+
+            
+            <li class="divider"></li>
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        前言
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+            <span><b>1.</b> 1.开始</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="1.开始/1.Introduction 介绍.html">
+            
+                
+                    <a href="../1.开始/1.Introduction 介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        1.Introduction 介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1.开始/2.Why Drill 为什么使用 Drill.html">
+            
+                
+                    <a href="../1.开始/2.Why Drill 为什么使用 Drill.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        2.Why Drill 为什么使用 Drill
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" >
+            
+            <span><b>2.</b> 2.架构</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="2.架构/1.Architecture Introduction 架构介绍.html">
+            
+                
+                    <a href="../2.架构/1.Architecture Introduction 架构介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        1.Architecture Introduction 架构介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="2.架构/2.Drill Query Execution Drill 查询执行.html">
+            
+                
+                    <a href="../2.架构/2.Drill Query Execution Drill 查询执行.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        2.Drill Query Execution Drill 查询执行
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="2.架构/3.Core Modules 核心模块.html">
+            
+                
+                    <a href="../2.架构/3.Core Modules 核心模块.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        3.Core Modules 核心模块
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="2.架构/4.Performance 性能.html">
+            
+                
+                    <a href="../2.架构/4.Performance 性能.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        4.Performance 性能
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" >
+            
+            <span><b>3.</b> 3.教程</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="3.教程/1.Tutorials Introduction 教程介绍.html">
+            
+                
+                    <a href="../3.教程/1.Tutorials Introduction 教程介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        1.Tutorials Introduction 教程介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="3.教程/2.Drill in 10 Minutes 快速指导.html">
+            
+                
+                    <a href="../3.教程/2.Drill in 10 Minutes 快速指导.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        2.Drill in 10 Minutes 快速指导
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="3.教程/3.A-Y-A-D 数据集分析.html">
+            
+                
+                    <a href="../3.教程/3.A-Y-A-D 数据集分析.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        3.A-Y-A-D 数据集分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+            <span><b>3.4.</b> 4.在 MapR 的 Sandbox 中学习 Drill</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="3.教程/4.在 MapR 的 Sandbox 中学习 Drill/1.关于 MapR 的 Sandbox.html">
+            
+                
+                    <a href="../3.教程/4.在 MapR 的 Sandbox 中学习 Drill/1.关于 MapR 的 Sandbox.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.1.</b>
+                        
+                        1.关于 MapR 的 Sandbox
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="3.教程/4.在 MapR 的 Sandbox 中学习 Drill/2.在 Sandbox 中安装 Drill.html">
+            
+                
+                    <a href="../3.教程/4.在 MapR 的 Sandbox 中学习 Drill/2.在 Sandbox 中安装 Drill.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.</b>
+                        
+                        2.在 Sandbox 中安装 Drill
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="3.教程/4.在 MapR 的 Sandbox 中学习 Drill/3.在 Sandbox 中使用 Drill.html">
+            
+                
+                    <a href="../3.教程/4.在 MapR 的 Sandbox 中学习 Drill/3.在 Sandbox 中使用 Drill.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.3.</b>
+                        
+                        3.在 Sandbox 中使用 Drill
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.4" data-path="3.教程/4.在 MapR 的 Sandbox 中学习 Drill/4.课程1:学习数据集.html">
+            
+                
+                    <a href="../3.教程/4.在 MapR 的 Sandbox 中学习 Drill/4.课程1:学习数据集.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.4.</b>
+                        
+                        4.课程1:学习数据集
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.5" data-path="3.教程/4.在 MapR 的 Sandbox 中学习 Drill/5.课程2:使用 ANSI SQL 查询.html">
+            
+                
+                    <a href="../3.教程/4.在 MapR 的 Sandbox 中学习 Drill/5.课程2:使用 ANSI SQL 查询.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.5.</b>
+                        
+                        5.课程2:使用 ANSI SQL 查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.6" data-path="3.教程/4.在 MapR 的 Sandbox 中学习 Drill/6.课程3:查询复杂的数据类型.html">
+            
+                
+                    <a href="../3.教程/4.在 MapR 的 Sandbox 中学习 Drill/6.课程3:查询复杂的数据类型.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.6.</b>
+                        
+                        6.课程3:查询复杂的数据类型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.7" data-path="3.教程/4.在 MapR 的 Sandbox 中学习 Drill/7.总结.html">
+            
+                
+                    <a href="../3.教程/4.在 MapR 的 Sandbox 中学习 Drill/7.总结.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.7.</b>
+                        
+                        7.总结
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="3.教程/5.高度动态的数据集分析.html">
+            
+                
+                    <a href="../3.教程/5.高度动态的数据集分析.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        5.高度动态的数据集分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.6" data-path="3.教程/6.社会媒体分析.html">
+            
+                
+                    <a href="../3.教程/6.社会媒体分析.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        6.社会媒体分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="3.教程/7.使用窗口函数分析数据.html">
+            
+                
+                    <a href="../3.教程/7.使用窗口函数分析数据.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        7.使用窗口函数分析数据
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" >
+            
+            <span><b>4.</b> 4.安装 Drill</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="4.安装 Drill/1.Drill 安装介绍.html">
+            
+                
+                    <a href="../4.安装 Drill/1.Drill 安装介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        1.Drill 安装介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="4.安装 Drill/2.迁移 Parquet 数据.html">
+            
+                
+                    <a href="../4.安装 Drill/2.迁移 Parquet 数据.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        2.迁移 Parquet 数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" >
+            
+            <span><b>4.3.</b> 3.安装 Drill 到嵌入模式</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="4.安装 Drill/3.安装 Drill 到嵌入模式/1.嵌入模式的先决条件.html">
+            
+                
+                    <a href="../4.安装 Drill/3.安装 Drill 到嵌入模式/1.嵌入模式的先决条件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.1.</b>
+                        
+                        1.嵌入模式的先决条件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="4.安装 Drill/3.安装 Drill 到嵌入模式/2.在 Linux 和 Mac OS X 上安装 Drill.html">
+            
+                
+                    <a href="../4.安装 Drill/3.安装 Drill 到嵌入模式/2.在 Linux 和 Mac OS X 上安装 Drill.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.2.</b>
+                        
+                        2.在 Linux 和 Mac OS X 上安装 Drill
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.3" data-path="4.安装 Drill/3.安装 Drill 到嵌入模式/3.在 Linux 和 Mac OS X 上启动 Drill.html">
+            
+                
+                    <a href="../4.安装 Drill/3.安装 Drill 到嵌入模式/3.在 Linux 和 Mac OS X 上启动 Drill.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.3.</b>
+                        
+                        3.在 Linux 和 Mac OS X 上启动 Drill
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.4" data-path="4.安装 Drill/3.安装 Drill 到嵌入模式/4.在 Windows 上安装 Drill.html">
+            
+                
+                    <a href="../4.安装 Drill/3.安装 Drill 到嵌入模式/4.在 Windows 上安装 Drill.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.4.</b>
+                        
+                        4.在 Windows 上安装 Drill
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.5" data-path="4.安装 Drill/3.安装 Drill 到嵌入模式/5.在 Windows 上启动 Drill.html">
+            
+                
+                    <a href="../4.安装 Drill/3.安装 Drill 到嵌入模式/5.在 Windows 上启动 Drill.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.5.</b>
+                        
+                        5.在 Windows 上启动 Drill
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" >
+            
+            <span><b>4.4.</b> 4.安装 Drill 到分布式模式</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="4.安装 Drill/4.安装 Drill 到分布式模式/1.分布式模式的先决条件.html">
+            
+                
+                    <a href="../4.安装 Drill/4.安装 Drill 到分布式模式/1.分布式模式的先决条件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.1.</b>
+                        
+                        1.分布式模式的先决条件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="4.安装 Drill/4.安装 Drill 到分布式模式/2.在集群上安装 Drill.html">
+            
+                
+                    <a href="../4.安装 Drill/4.安装 Drill 到分布式模式/2.在集群上安装 Drill.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.2.</b>
+                        
+                        2.在集群上安装 Drill
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.3" data-path="4.安装 Drill/4.安装 Drill 到分布式模式/3.在分布式模式下启动 Drill.html">
+            
+                
+                    <a href="../4.安装 Drill/4.安装 Drill 到分布式模式/3.在分布式模式下启动 Drill.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.3.</b>
+                        
+                        3.在分布式模式下启动 Drill
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="4.安装 Drill/5.启动 Web 控制台.html">
+            
+                
+                    <a href="../4.安装 Drill/5.启动 Web 控制台.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        5.启动 Web 控制台
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" >
+            
+            <span><b>5.</b> 5.配置 Drill</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="5.配置 Drill/1.配置介绍.html">
+            
+                
+                    <a href="../5.配置 Drill/1.配置介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        1.配置介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="5.配置 Drill/2.配置内存.html">
+            
+                
+                    <a href="../5.配置 Drill/2.配置内存.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        2.配置内存
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" >
+            
+            <span><b>5.3.</b> 3.配置一个多租户集群</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.3.1" data-path="5.配置 Drill/3.配置一个多租户集群/1.配置一个多租户介绍.html">
+            
+                
+                    <a href="../5.配置 Drill/3.配置一个多租户集群/1.配置一个多租户介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.1.</b>
+                        
+                        1.配置一个多租户介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.2" data-path="5.配置 Drill/3.配置一个多租户集群/2.配置多租户资源.html">
+            
+                
+                    <a href="../5.配置 Drill/3.配置一个多租户集群/2.配置多租户资源.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.2.</b>
+                        
+                        2.配置多租户资源
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.3" data-path="5.配置 Drill/3.配置一个多租户集群/3.配置 Drillbit 共享资源.html">
+            
+                
+                    <a href="../5.配置 Drill/3.配置一个多租户集群/3.配置 Drillbit 共享资源.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.3.</b>
+                        
+                        3.配置 Drillbit 共享资源
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="5.配置 Drill/4.配置模拟身份.html">
+            
+                
+                    <a href="../5.配置 Drill/4.配置模拟身份.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        4.配置模拟身份
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="5.配置 Drill/5.配置用户身份验证.html">
+            
+                
+                    <a href="../5.配置 Drill/5.配置用户身份验证.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        5.配置用户身份验证
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="5.配置 Drill/6.配置 Hive 用户身份验证.html">
+            
+                
+                    <a href="../5.配置 Drill/6.配置 Hive 用户身份验证.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        6.配置 Hive 用户身份验证
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="5.配置 Drill/7.配置 Web 控制台和 REST API 安全.html">
+            
+                
+                    <a href="../5.配置 Drill/7.配置 Web 控制台和 REST API 安全.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        7.配置 Web 控制台和 REST API 安全
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" >
+            
+            <span><b>5.8.</b> 8.可选配置</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.8.1" data-path="5.配置 Drill/8.可选配置/1.可选配置介绍.html">
+            
+                
+                    <a href="../5.配置 Drill/8.可选配置/1.可选配置介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.1.</b>
+                        
+                        1.可选配置介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8.2" data-path="5.配置 Drill/8.可选配置/2.启动可选项.html">
+            
+                
+                    <a href="../5.配置 Drill/8.可选配置/2.启动可选项.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.2.</b>
+                        
+                        2.启动可选项
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8.3" data-path="5.配置 Drill/8.可选配置/3.计划和执行可选项.html">
+            
+                
+                    <a href="../5.配置 Drill/8.可选配置/3.计划和执行可选项.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.3.</b>
+                        
+                        3.计划和执行可选项
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8.4" data-path="5.配置 Drill/8.可选配置/4.持久化配置存储.html">
+            
+                
+                    <a href="../5.配置 Drill/8.可选配置/4.持久化配置存储.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.4.</b>
+                        
+                        4.持久化配置存储
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" data-path="5.配置 Drill/9.Drill 端口使用.html">
+            
+                
+                    <a href="../5.配置 Drill/9.Drill 端口使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.9.</b>
+                        
+                        9.Drill 端口使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.10" data-path="5.配置 Drill/10.配置 Drill 终端.html">
+            
+                
+                    <a href="../5.配置 Drill/10.配置 Drill 终端.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.10.</b>
+                        
+                        10.配置 Drill 终端
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" >
+            
+            <span><b>6.</b> 6.连接数据源</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="6.连接数据源/1.介绍.html">
+            
+                
+                    <a href="../6.连接数据源/1.介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        1.介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="6.连接数据源/2.注册存储插件.html">
+            
+                
+                    <a href="../6.连接数据源/2.注册存储插件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        2.注册存储插件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" >
+            
+            <span><b>6.3.</b> 3.配置存储插件</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="6.连接数据源/3.配置存储插件/1.插件基础设置.html">
+            
+                
+                    <a href="../6.连接数据源/3.配置存储插件/1.插件基础设置.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.1.</b>
+                        
+                        1.插件基础设置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="6.连接数据源/3.配置存储插件/2.工作区间.html">
+            
+                
+                    <a href="../6.连接数据源/3.配置存储插件/2.工作区间.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.2.</b>
+                        
+                        2.工作区间
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.3" data-path="6.连接数据源/3.配置存储插件/3.Drill 默认输出格式.html">
+            
+                
+                    <a href="../6.连接数据源/3.配置存储插件/3.Drill 默认输出格式.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.3.</b>
+                        
+                        3.Drill 默认输出格式
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="6.连接数据源/4.文件系统存储插件.html">
+            
+                
+                    <a href="../6.连接数据源/4.文件系统存储插件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        4.文件系统存储插件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="6.连接数据源/5.HBase 存储插件.html">
+            
+                
+                    <a href="../6.连接数据源/5.HBase 存储插件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        5.HBase 存储插件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="6.连接数据源/6.Hive 存储插件.html">
+            
+                
+                    <a href="../6.连接数据源/6.Hive 存储插件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        6.Hive 存储插件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="6.连接数据源/7.RDBMS 存储插件.html">
+            
+                
+                    <a href="../6.连接数据源/7.RDBMS 存储插件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        7.RDBMS 存储插件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="6.连接数据源/8.MongoDB 存储插件.html">
+            
+                
+                    <a href="../6.连接数据源/8.MongoDB 存储插件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        8.MongoDB 存储插件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="6.连接数据源/9.S3 存储插件.html">
+            
+                
+                    <a href="../6.连接数据源/9.S3 存储插件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.9.</b>
+                        
+                        9.S3 存储插件
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" >
+            
+            <span><b>7.</b> 7.ODBC 和 JDBC 接口</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="7.ODBC 和 JDBC 接口/1.介绍.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/1.介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        1.介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="7.ODBC 和 JDBC 接口/2.使用 JDBC 驱动.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/2.使用 JDBC 驱动.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        2.使用 JDBC 驱动
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="7.ODBC 和 JDBC 接口/3.在 Windows 上使用 JDBC 和 SQuirreL.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/3.在 Windows 上使用 JDBC 和 SQuirreL.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        3.在 Windows 上使用 JDBC 和 SQuirreL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" >
+            
+            <span><b>7.4.</b> 4.安装 ODBC 驱动</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.4.1" data-path="7.ODBC 和 JDBC 接口/4.安装 ODBC 驱动/1.在 Linux 上安装驱动.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/4.安装 ODBC 驱动/1.在 Linux 上安装驱动.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.1.</b>
+                        
+                        1.在 Linux 上安装驱动
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4.2" data-path="7.ODBC 和 JDBC 接口/4.安装 ODBC 驱动/2.在 Mac OS X 上安装驱动.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/4.安装 ODBC 驱动/2.在 Mac OS X 上安装驱动.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.2.</b>
+                        
+                        2.在 Mac OS X 上安装驱动
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4.3" data-path="7.ODBC 和 JDBC 接口/4.安装 ODBC 驱动/3.在 Windows 上安装驱动.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/4.安装 ODBC 驱动/3.在 Windows 上安装驱动.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.3.</b>
+                        
+                        3.在 Windows 上安装驱动
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4.4" data-path="7.ODBC 和 JDBC 接口/4.安装 ODBC 驱动/4.在 Windows 上安装 TDC 文件.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/4.安装 ODBC 驱动/4.在 Windows 上安装 TDC 文件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.4.</b>
+                        
+                        4.在 Windows 上安装 TDC 文件
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" >
+            
+            <span><b>7.5.</b> 5.配置 ODBC</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.5.1" data-path="7.ODBC 和 JDBC 接口/5.配置 ODBC/1.ODBC 配置参考.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/5.配置 ODBC/1.ODBC 配置参考.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.1.</b>
+                        
+                        1.ODBC 配置参考
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5.2" data-path="7.ODBC 和 JDBC 接口/5.配置 ODBC/2.在 Linux 上配置 ODBC.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/5.配置 ODBC/2.在 Linux 上配置 ODBC.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.2.</b>
+                        
+                        2.在 Linux 上配置 ODBC
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5.3" data-path="7.ODBC 和 JDBC 接口/5.配置 ODBC/3.在 Max OS X 上配置 ODBC.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/5.配置 ODBC/3.在 Max OS X 上配置 ODBC.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.3.</b>
+                        
+                        3.在 Max OS X 上配置 ODBC
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5.4" data-path="7.ODBC 和 JDBC 接口/5.配置 ODBC/4.在 Windows 上配置 ODBC.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/5.配置 ODBC/4.在 Windows 上配置 ODBC.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.4.</b>
+                        
+                        4.在 Windows 上配置 ODBC
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5.5" data-path="7.ODBC 和 JDBC 接口/5.配置 ODBC/5.测试 ODBC 连接.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/5.配置 ODBC/5.测试 ODBC 连接.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.5.</b>
+                        
+                        5.测试 ODBC 连接
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" >
+            
+            <span><b>7.6.</b> 6.使用 Drill</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.6.1" data-path="7.ODBC 和 JDBC 接口/6.使用 Drill/1.介绍.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/6.使用 Drill/1.介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.1.</b>
+                        
+                        1.介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6.2" data-path="7.ODBC 和 JDBC 接口/6.使用 Drill/2.连接 Drill 到数据源.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/6.使用 Drill/2.连接 Drill 到数据源.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.2.</b>
+                        
+                        2.连接 Drill 到数据源
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6.3" data-path="7.ODBC 和 JDBC 接口/6.使用 Drill/3.浏览数据和定义视图.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/6.使用 Drill/3.浏览数据和定义视图.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.3.</b>
+                        
+                        3.浏览数据和定义视图
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" >
+            
+            <span><b>7.7.</b> 7.用 BI 工具连接 Drill</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.7.1" data-path="7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/1.介绍.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/1.介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.1.</b>
+                        
+                        1.介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7.2" data-path="7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/2.Tableau 示例.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/2.Tableau 示例.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.2.</b>
+                        
+                        2.使用 JDBC 驱动
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7.3" data-path="7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/3.使用 MicroStrategy 分析.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/3.使用 MicroStrategy 分析.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.3.</b>
+                        
+                        3.在 Windows 上使用 JDBC 和 SQuirreL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7.4" data-path="7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/4.使用 Tibco Spotfire 客户端.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/4.使用 Tibco Spotfire 客户端.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.4.</b>
+                        
+                        4.使用 Tibco Spotfire 客户端
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7.5" data-path="7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/5.使用 Qlik Sense.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/5.使用 Qlik Sense.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.5.</b>
+                        
+                        5.使用 Qlik Sense
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7.6" data-path="7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/6.使用 Tableau 9 客户端.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/6.使用 Tableau 9 客户端.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.6.</b>
+                        
+                        6.使用 Tableau 9 客户端
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7.7" data-path="7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/7.使用 Tableau 9 服务端.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/7.使用 Tableau 9 服务端.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.7.</b>
+                        
+                        7.使用 Tableau 9 服务端
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7.8" data-path="7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/8.配置 JReport.html">
+            
+                
+                    <a href="../7.ODBC 和 JDBC 接口/7.用 BI 工具连接 Drill/8.配置 JReport.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.8.</b>
+                        
+                        8.配置 JReport
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Apache Drill</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x793E;&#x4F1A;&#x5A92;&#x4F53;&#x5206;&#x6790;">&#x793E;&#x4F1A;&#x5A92;&#x4F53;&#x5206;&#x6790;</h1>
+<p>&#x672C;&#x6559;&#x7A0B;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x4F7F;&#x7528; Apache Drill&#xFF0C;&#x5728;&#x539F;&#x751F;&#x7684; JSON &#x683C;&#x5F0F;&#x4E2D;&#xFF0C;&#x5206;&#x6790; Twitter &#x6570;&#x636E;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x4F60;&#x4F7F;&#x7528; Apache &#x7684; Flume &#x53BB;&#x5206;&#x5272; Twitter &#x6570;&#x636E;&#x4E2D;&#x7684;&#x5173;&#x952E;&#x5B57;&#x548C;&#x8BED;&#x8A00;&#xFF0C;&#x7136;&#x540E;&#x4F60;&#x4F7F;&#x7528; Drill &#x53BB;&#x5206;&#x6790;&#x6570;&#x636E;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x4F60;&#x4F7F;&#x7528; MicroStrategy &#x4E0E;&#x4E4B;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x5E76;&#x5206;&#x6790;&#x3002;</p>
+<h2 id="&#x793E;&#x4F1A;&#x5A92;&#x4F53;&#x5206;&#x6790;&#x6761;&#x4EF6;">&#x793E;&#x4F1A;&#x5A92;&#x4F53;&#x5206;&#x6790;&#x6761;&#x4EF6;</h2>
+<ul>
+<li>Twitter &#x5F00;&#x53D1;&#x8005;&#x8D26;&#x53F7;</li>
+<li>AWS &#x8D26;&#x53F7;</li>
+<li>&#x4E00;&#x4E2A; AWS &#x4E0A;&#x7684; MapR &#x8282;&#x70B9;</li>
+<li>&#x4E00;&#x4E2A; MicroStrategy AWS &#x5B9E;&#x4F8B;</li>
+</ul>
+<h2 id="&#x8BBE;&#x7F6E;-aws-&#x73AF;&#x5883;">&#x8BBE;&#x7F6E; AWS &#x73AF;&#x5883;</h2>
+<p>&#x5728; Amazon Web Services&#xFF08;AWS&#xFF09;&#x4E0A;&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x4EE5;&#x4E0B;&#x4EFB;&#x52A1;&#xFF1A;</p>
+<ul>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Twitter &#x5F00;&#x53D1;&#x8005;&#x8D26;&#x53F7;&#x5E76;&#x6CE8;&#x518C;&#x4E00;&#x4E2A; Twitter &#x5E94;&#x7528;</li>
+<li>&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x9884;&#x5148;&#x8BBE;&#x5B9A;&#x7684; AWS MapR &#x8282;&#x70B9;&#xFF0C;&#x548C; Flume &#x4EE5;&#x53CA; Drill</li>
+<li>&#x63D0;&#x4F9B;&#x4E00;&#x4E2A; MicroStrategy AWS &#x5B9E;&#x4F8B;</li>
+<li>&#x5728; MicroStrategy &#x4E0A;&#x914D;&#x7F6E; Drill&#xFF0C;&#x5E76;&#x8FD0;&#x884C;&#x62A5;&#x8868;&#x548C;&#x5206;&#x6790;</li>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Twitter &#x5F00;&#x53D1;&#x8005;&#x8D26;&#x53F7;&#x548C;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x5E94;&#x7528;</li>
+</ul>
+<p>&#x8BE5;&#x6559;&#x7A0B;&#x662F;&#x5728;&#x4F60;&#x719F;&#x6089; MicroStrategy &#x7684;&#x524D;&#x63D0;&#x4E0B;&#x5B8C;&#x6210;&#x7684;&#x3002;&#x66F4;&#x591A;&#x5173;&#x4E8E;&#x5B83;&#x7684;&#x4F7F;&#x7528;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x770B;<a href="http://www.microstrategy.com/Strategy/media/downloads/products/cloud/cloud_aws-user-guide.pdf" target="_blank">MicroStrategy &#x4F7F;&#x7528;&#x6307;&#x5BFC;</a></p>
+<h2 id="&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;-twitter-&#x548C;-flume-&#x7684;&#x8BC1;&#x4E66;">&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A; Twitter &#x548C; Flume &#x7684;&#x8BC1;&#x4E66;</h2>
+<p>&#x6309;&#x4EE5;&#x4E0B;&#x6B65;&#x9AA4;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A; Twitter &#x5E76;&#x83B7;&#x53D6; Twitter &#x8BC1;&#x4E66;&#xFF0C;&#x9700;&#x8981;&#x7531; Flume &#x53BB;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A; Twitter &#x4F5C;&#x4E3A;&#x6570;&#x636E;&#x6E90;&#xFF1A;</p>
+<ol>
+<li>&#x53BB; <code>dev.twitter.com</code> &#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x4F60;&#x81EA;&#x5DF1;&#x7684; Twitter &#x8D26;&#x53F7;&#x3002;</li>
+<li>&#x70B9;&#x51FB; <code>Manage Your Apps</code> &#x5728;&#x9875;&#x9762;&#x5E95;&#x90E8;&#x7684;&#x5DE5;&#x5177;&#x680F;&#x3002;</li>
+<li>&#x70B9;&#x51FB; <code>Create New App</code> &#x5E76;&#x4E14;&#x5B8C;&#x5584;&#x4F60;&#x7684;&#x8868;&#x5355;&#xFF0C;&#x7136;&#x540E;&#x521B;&#x5EFA;&#x5E94;&#x7528;&#x3002;</li>
+<li>&#x5728; <code>Keys and Access Tokens</code> &#x680F;&#x4E2D;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; token&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB; <code>Create My Access Token</code>&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x53EA;&#x8BFB;&#x6743;&#x9650;&#x7684; token&#x3002;</li>
+<li>&#x62F7;&#x8D1D;&#x4EE5;&#x4E0B;&#x8BC1;&#x4E66;&#x5230; Twitter &#x7684; App &#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x914D;&#x7F6E; Flume&#xFF1A;<ul>
+<li>&#x6D88;&#x8D39;&#x8005;&#x7684; Key</li>
+<li>&#x6D88;&#x8D39;&#x8005;&#x7684;&#x79D8;&#x94A5;</li>
+<li>Token</li>
+<li>Token &#x79D8;&#x94A5;</li>
+</ul>
+</li>
+</ol>
+<h2 id="&#x9884;&#x5148;&#x5728;-aws-&#x4E0A;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;-mapr-&#x8282;&#x70B9;">&#x9884;&#x5148;&#x5728; AWS &#x4E0A;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A; MapR &#x8282;&#x70B9;</h2>
+<p>&#x4F60;&#x9700;&#x8981;&#x9884;&#x5148;&#x5728; AWS &#x4E0A;&#x914D;&#x7F6E;&#x4E00;&#x4E2A; MapR &#x7684;&#x8282;&#x70B9;&#xFF0C;&#x547D;&#x540D;&#x4E3A; ami-4dedc47d&#x3002;AMI &#x5DF2;&#x7ECF;&#x914D;&#x7F6E;&#x4E86; Flume&#xFF0C;Drill&#xFF0C;&#x4EE5;&#x53CA;&#x7279;&#x5B9A;&#x5143;&#x7D20;&#x652F;&#x6301;&#x7684;&#x6570;&#x636E;&#x6D41;&#xFF0C;&#x4ECE; Twitter &#x548C; Drill &#x7684;&#x67E5;&#x8BE2;&#x89C6;&#x56FE;&#x4E2D;&#x3002;AMI &#x662F;&#x4E00;&#x4E2A;&#x516C;&#x5F00;&#x53EF;&#x7528;&#x793E;&#x533A;&#xFF0C;&#x5B83;&#x6709; 6GB &#x7684;&#x6839;&#x76EE;&#x5F55;&#xFF0C;&#x4EE5;&#x53CA; 100GB &#x7684;&#x6570;&#x636E;&#x3002;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5C0F;&#x8282;&#x70B9;&#xFF0C;&#x975E;&#x5E38;&#x5927;&#x7684;&#x6570;&#x636E;&#x91CF;&#x5C06;&#x5927;&#x5927;&#x51CF;&#x5C11; Twitter &#x6570;&#x636E;&#x67E5;&#x8BE2;&#x7684;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x3002;</p>
+<ol>
+<li>&#x5728; AWS &#x4E2D;&#xFF0C;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x3002;AMI &#x955C;&#x50CF;&#x662F;&#x9884;&#x7528; m2.2xlarge &#x5B9E;&#x4F8B;&#x7C7B;&#x578B;&#xFF0C;&#x4EE5;&#x53CA; 4 &#x4E2A;&#x865A;&#x62DF; CPU &#x548C; 32G &#x5185;&#x5B58;&#x3002;</li>
+<li>&#x9009;&#x62E9; AMI &#x7684; id ami-4dedc47d&#x3002;</li>
+<li>&#x786E;&#x4FDD;&#x4F60;&#x7684;&#x5B9E;&#x4F8B;&#x88AB;&#x5206;&#x914D;&#x4E86;&#x4E00;&#x4E2A;&#x5916;&#x7F51; IP&#xFF0C;&#x9759;&#x6001; IP &#x662F;&#x9996;&#x9009;&#xFF0C;&#x4F46;&#x4E0D;&#x662F;&#x5FC5;&#x9700;&#x7684;&#x3002;</li>
+<li>&#x786E;&#x4FDD;&#x4F60;&#x7684;&#x8282;&#x70B9;&#x4E0A;&#x7684; TCP &#x548C; UDP &#x7AEF;&#x53E3;&#x53EF;&#x7528;&#x3002;</li>
+<li>&#x5728;&#x914D;&#x7F6E;&#x548C;&#x542F;&#x52A8;&#x5B9E;&#x4F8B;&#x540E;&#xFF0C;&#x5728; AWS EC2 &#x7684;&#x7BA1;&#x7406;&#x754C;&#x9762;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x8282;&#x70B9;&#x6765;&#x5B8C;&#x6210;&#x914D;&#x7F6E;&#x3002;</li>
+</ol>
+<p>&#x8BE5;&#x8282;&#x70B9;&#x662F;&#x9700;&#x8981;&#x5B89;&#x88C5; Flume &#x548C; Drill&#x3002;&#x4E0B;&#x4E00;&#x6B65;&#xFF0C;&#x66F4;&#x65B0; Flume &#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6240;&#x9700;&#x8981;&#x7684;&#x8BC1;&#x4E66;&#x548C; keywords&#x3002;</p>
+<h2 id="&#x66F4;&#x65B0;-flume-&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x66F4;&#x65B0; Flume &#x914D;&#x7F6E;&#x6587;&#x4EF6;</h2>
+<ol>
+<li>&#x4F7F;&#x7528; AWS &#x8BC1;&#x4E66;&#x7528; ec2-user &#x8BC1;&#x4E66;&#x767B;&#x5F55;&#x3002;</li>
+<li>&#x5728;&#x8282;&#x70B9;&#x4E0A;&#x4F7F;&#x7528; <code>su - mapr</code> &#x5207;&#x6362;&#x5230; mapr &#x7528;&#x6237;&#x3002;</li>
+<li>&#x66F4;&#x65B0; Flume &#x914D;&#x7F6E;&#x6587;&#x4EF6; <code>flume-env.sh</code> &#x548C; <code>flume.conf</code> &#x5728; <code>&lt;FLUME HOME&gt;/conf</code> &#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5728;&#x7B2C;&#x4E00;&#x8282;&#x4E2D;&#x4F7F;&#x7528; Twitter App &#x8BC1;&#x4E66;&#x3002;<a href="https://github.com/mapr/mapr-demos/tree/master/drill-twitter-MSTR/flume" target="_blank">&#x5B9E;&#x4F8B;&#x8BE6;&#x60C5;</a>&#x3002;</li>
+<li>&#x8F93;&#x5165;&#x60F3;&#x8981;&#x7684;&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x7528;&#x9017;&#x53F7;&#x5206;&#x5272;&#x3002;&#x7528;&#x7A7A;&#x683C;&#x5206;&#x5272;&#x591A;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#x3002;</li>
+<li>&#x8FC7;&#x6EE4; Twitter &#x4E2D;&#x7279;&#x5B9A;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x5FC5;&#x8981;&#xFF0C;&#x8F93;&#x5165; ISO 639-1 &#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x53BB;&#x5206;&#x5272;&#x5E76;&#x7531;&#x4E00;&#x4E2A;&#x9017;&#x53F7;&#x5206;&#x5F00;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x9700;&#x8981;&#x8BED;&#x8A00;&#x8FC7;&#x6EE4;&#xFF0C;&#x7559;&#x4E0B;&#x4E00;&#x4E2A;&#x7A7A;&#x767D;&#x7684;&#x53C2;&#x6570;&#x3002;</li>
+<li>&#x4F7F;&#x7528; mapr &#x7528;&#x6237;&#xFF0C;&#x5728;&#x5C4F;&#x5E55;&#x7684;&#x7EC8;&#x7AEF;&#x4E2D;&#xFF0C;&#x8F93;&#x5165;&#x547D;&#x4EE4;&#x8FDB;&#x5165;&#x5230; FLUME HOME &#x76EE;&#x5F55;&#x3002;</li>
+<li>&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x542F;&#x52A8; Flume&#xFF1A;<pre><code class="lang-bash">./bin/flume-ng agent --conf ./conf/ <span class="hljs-operator">-f</span> ./conf/flume.conf -Dflume.root.logger=INFO,console -n TwitterAgent
+</code></pre>
+</li>
+<li>&#x8F93;&#x5165; <code>CTRL+a</code> &#x9000;&#x51FA;&#xFF0C;&#x7136;&#x540E;&#x8F93;&#x5165; <code>d</code> &#x8FDB;&#x884C;&#x5206;&#x79BB;&#x3002;&#x5728;&#x56DE;&#x5230;&#x5C4F;&#x5E55;&#x7684;&#x7EC8;&#x7AEF;&#xFF0C;&#x7B80;&#x5355;&#x7684;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x8F93;&#x5165; -r &#x8FDB;&#x884C;&#x91CD;&#x73B0;&#x8FDE;&#x63A5;&#x3002;Twitter &#x7684;&#x6570;&#x636E;&#x6D41;&#x8FDB;&#x5165;&#x5230;&#x7CFB;&#x7EDF;&#x4E2D;&#x3002;</li>
+<li>&#x8FD0;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x6765;&#x9A8C;&#x8BC1;&#x5377;&#xFF1A;<pre><code class="lang-bash">du &#x2013;h /mapr/drill_demo/twitter/feed.
+</code></pre>
+</li>
+</ol>
+<p>&#x4F60;&#x4E0D;&#x80FD;&#x8FD0;&#x884C;&#x67E5;&#x8BE2;&#xFF0C;&#x6307;&#x5BFC;&#x6570;&#x636E;&#x51FA;&#x73B0;&#x5728;&#x76EE;&#x5F55;&#x4E2D;&#x3002;&#x6700;&#x5C0F;&#x5141;&#x8BB8;&#x65F6;&#x95F4;&#x4E3A; 20-30 &#x5206;&#x949F;&#x3002;</p>
+<h2 id="&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;-microstrategy-aws-&#x5B9E;&#x4F8B;">&#x63D0;&#x4F9B;&#x4E00;&#x4E2A; MicroStrategy AWS &#x5B9E;&#x4F8B;</h2>
+<p>MicroStrategy &#x63D0;&#x4F9B;&#x4E86;&#x5404;&#x79CD;&#x671F;&#x9650;&#x7684;&#x5B9E;&#x4F8B;&#x3002;&#x5B83;&#x914D;&#x5907;&#x7684; MicroStrategy &#x5B9E;&#x4F8B;&#x662F;&#x4E00;&#x4E2A;&#x514D;&#x8D39;&#x8BD5;&#x7528; 30 &#x5929;&#x7684;&#x5B9E;&#x4F8B;&#x3002;AWS &#x4ECD;&#x7136;&#x53EF;&#x4EE5;&#x5E94;&#x7528;&#x4E8E;&#x5E73;&#x53F0;&#x548C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x3002;</p>
+<p>&#x5728; AWS &#x4E0A;&#x63D0;&#x4F9B; MicroStrategy &#x8282;&#x70B9;&#xFF1A;</p>
+<ol>
+<li>&#x5728; <a href="http://www.microstrategy.com/us/analytics/analytics-on-aws" target="_blank">MicroStrategy website</a> &#x4E0A;&#xFF0C;&#x70B9;&#x51FB; &#x201C;Get started&#x201D;&#x3002;</li>
+<li>&#x9009;&#x62E9;&#x7528;&#x6237;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x9009;&#x62E9; 25 &#x7528;&#x6237;&#x3002;</li>
+<li>&#x9009;&#x62E9; AWS &#x533A;&#x57DF;&#x3002;&#x63A8;&#x8350;&#x5728;&#x4E00;&#x4E2A; MapR &#x8282;&#x70B9;&#x548C; MicroStrategy &#x5B9E;&#x4F8B;&#x4E0A;&#xFF0C;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684; AWS &#x533A;&#x57DF;&#x3002;</li>
+<li>&#x70B9;&#x51FB; &#x201C;Continue&#x201D;&#x3002;</li>
+<li>&#x5728;&#x6807;&#x7B7E;&#x680F;&#x4E2D;&#xFF0C;&#x70B9;&#x51FB; &#x201C;Launch with EC2 Console&#x201D;&#xFF0C;&#x4E4B;&#x540E;&#x518D;&#x9009;&#x62E9; &#x201C;r3.large instance&#x201D;&#x3002;</li>
+<li>&#x70B9;&#x51FB; &#x201C;Configure Instance Details&#x201D; &#x3002;</li>
+<li>&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x5408;&#x9002;&#x7684;&#x7F51;&#x7EDC;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#xFF0C;&#x5E94;&#x7528;&#x5230;&#x4F60;&#x7684; MapR &#x8282;&#x70B9;&#x4E2D;&#x3002;<pre><code>&#x91CD;&#x8981;&#xFF1A;&#x786E;&#x4FDD; MicroStrategy &#x5B9E;&#x4F8B;&#x6709;&#x5916;&#x7F51; IP&#xFF1B;&#x9759;&#x6001; IP &#x662F;&#x9996;&#x9009;&#x7684;&#xFF0C;&#x4F46;&#x4E0D;&#x662F;&#x5FC5;&#x9700;&#x7684;&#x3002;
+</code></pre></li>
+<li>&#x4FDD;&#x7559;&#x81EA;&#x5B9A;&#x4E49;&#x5B58;&#x50A8;&#x3002;</li>
+<li>&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#x6765;&#x8BC6;&#x522B;&#x5B9E;&#x4F8B;&#x3002;</li>
+<li>&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x5B89;&#x5168;&#x7EC4;&#xFF0C;&#x5141;&#x8BB8;&#x8DB3;&#x591F;&#x7684;&#x6743;&#x9650;&#x53BB;&#x8BBF;&#x95EE;&#x5916;&#x7F51; IP &#x548C;&#x5F00;&#x653E;&#x6240;&#x6709;&#x7684;&#x7AEF;&#x53E3;&#xFF0C;&#x56E0;&#x4E3A;&#x5B89;&#x5168;&#x8FD9;&#x91CC;&#x5E76;&#x4E0D;&#x5173;&#x5FC3;&#x3002;</li>
+<li>&#x5728; AWS &#x63A7;&#x5236;&#x53F0;&#xFF0C;&#x542F;&#x52A8;&#x5B9E;&#x4F8B;&#xFF0C;&#x5F53; AWS &#x62A5;&#x544A;&#x5B9E;&#x4F8B;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x9009;&#x62E9;&#x5B83;&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB; &#x201C;Connect&#x201D;&#x3002;</li>
+<li>&#x70B9;&#x51FB; &#x201C;Get Password&#x201D; &#x53BB;&#x83B7;&#x53D6;&#x7CFB;&#x7EDF;&#x7684;&#x7684;&#x7BA1;&#x7406;&#x5458;&#x5BC6;&#x7801;&#x3002;</li>
+</ol>
+<p>&#x5B9E;&#x4F8B;&#x73B0;&#x5728;&#x4F7F;&#x7528; RDP &#x548C;&#x4F7F;&#x7528;&#x76F8;&#x5173; AWS &#x7684;&#x8BC1;&#x4E66;&#x548C;&#x5B89;&#x5168;&#x3002;</p>
+<h2 id="&#x914D;&#x7F6E;-microstrategy">&#x914D;&#x7F6E; MicroStrategy</h2>
+<p>&#x4F60;&#x9700;&#x8981;&#x914D;&#x7F6E; MicroStrategy&#xFF0C;&#x4F7F;&#x7528; ODBC &#x9A71;&#x52A8;&#x5C06;&#x5176;&#x96C6;&#x6210;&#x5230; Drill &#x4E2D;&#x3002;&#x4F60;&#x8981;&#x5148;&#x5B89;&#x88C5;&#x4E00;&#x4E2A; MicroStrategy &#x5305;&#x548C;&#x4E00;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4E3A; Twitter &#x63D0;&#x524D;&#x51C6;&#x5907;&#x62A5;&#x544A;&#x5DE5;&#x4F5C;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x62A5;&#x544A;&#x6216;&#x4F7F;&#x7528;&#x62A5;&#x8868;&#x4F5C;&#x4E3A;&#x6A21;&#x7248;&#x6765;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#xFF0C;&#x548C;&#x66F4;&#x52A0;&#x6709;&#x8DA3;&#x7684;&#x62A5;&#x544A;&#x548C;&#x5206;&#x6790;&#x6A21;&#x578B;&#x3002;</p>
+<ol>
+<li>&#x4F7F;&#x7528; ODBC &#x7BA1;&#x7406;&#x5458;&#xFF0C;&#x914D;&#x7F6E;&#x7CFB;&#x7EDF; DSN &#x540D;&#x79F0;&#x4E3A; <code>Twitter</code>&#x3002;MapR ODBC &#x9A71;&#x52A8;&#x5FEB;&#x901F;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x533A;&#x8981; DSN&#x3002;</li>
+<li><a href="http://package.mapr.com/tools/MapR-ODBC/MapR_Drill/MapRDrill_odbc_v0.08.1.0618/MapRDrillODBC32.msi" target="_blank">&#x4E0B;&#x8F7D;&#x57FA;&#x4E8E; Drill &#x7684; MapR ODBC &#x5FEB;&#x901F;&#x542F;&#x52A8;&#x7248;&#x672C;</a>&#x3002;</li>
+<li>&#x914D;&#x7F6E; ODBC &#x9A71;&#x52A8;&#x5230; MicroStrategy&#x3002;Drill &#x662F;&#x5305;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x53BB;&#x914D;&#x7F6E;&#x3002;</li>
+<li>&#x5982;&#x679C; MapR &#x8282;&#x70B9;&#x548C; MicroStrategy &#x5B9E;&#x4F8B;&#x5728;&#x76F8;&#x540C;&#x7684;&#x533A;&#x57DF;&#x5185;&#xFF0C;&#x4F7F;&#x7528; AWS &#x7684;&#x5185;&#x7F51; IP&#xFF08;&#x63A8;&#x8350;&#xFF09;&#x3002;</li>
+<li>&#x4E0B;&#x8F7D; <a href="https://github.com/mapr/mapr-demos/blob/master/drill-twitter-MSTR/MSTR/DrillTwitterProjectPackage.mmp" target="_blank">Drill &#x548C; Twitter &#x7684;&#x914D;&#x7F6E;</a> &#x5305;&#xFF0C;&#x8BE5;&#x5305;&#x662F; Windows &#x7CFB;&#x7EDF;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Git &#x547D;&#x4EE4;&#x5C06;&#x5176; Clone &#x4E0B;&#x6765;&#x3002;</li>
+</ol>
+<h2 id="&#x5BFC;&#x5165;&#x62A5;&#x8868;">&#x5BFC;&#x5165;&#x62A5;&#x8868;</h2>
+<ol>
+<li>&#x5728; MicroStrategy &#x4E2D;&#xFF0C;&#x9009;&#x62E9; &#x201C;Schema &gt; Create New Project &#x201D;&#xFF0C;&#x53BB;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x9879;&#x76EE;&#x5DE5;&#x7A0B;&#x3002;</li>
+<li>&#x70B9;&#x51FB; &#x201C;Create Project&#x201D; &#x5E76;&#x6307;&#x660E;&#x65B0;&#x5DE5;&#x7A0B;&#x7684;&#x540D;&#x79F0;&#x3002;</li>
+<li>&#x70B9;&#x51FB; &#x201C;OK&#x201D;&#x3002;&#x9879;&#x76EE;&#x51FA;&#x73B0;&#x5728; MicroStrategy &#x5F00;&#x53D1;&#x7248;&#x672C;&#x4E2D;&#x3002;</li>
+<li>&#x6253;&#x5F00; MicroStrategy &#x5BF9;&#x8C61;&#x7BA1;&#x7406;&#x3002;</li>
+<li><p>&#x8FDE;&#x63A5;&#x5230;&#x9879;&#x76EE;&#x6E90;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x7BA1;&#x7406;&#x5458;&#x8EAB;&#x4EFD;&#x767B;&#x5F55;&#x3002;</p>
+<p><img src="../res/socialmed1.png" alt="socialmed1.png"></p>
+</li>
+<li>&#x8FDB;&#x5165;&#x5230; MicroStrategy &#x5BF9;&#x8C61;&#x7BA1;&#x7406;&#x7684;&#x5206;&#x6790;&#x6A21;&#x5757;&#xFF0C;&#x9009;&#x62E9;&#x9879;&#x76EE;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x9009;&#x62E9; &#x201C;Twitter analysis Apache Drill&#x201D;&#x3002;
+<img src="../res/socialmed2.png" alt="socialmed2.png"></li>
+<li>&#x9009;&#x62E9; &#x201C;Tools &gt; Import Configuration Package&#x201D;&#x3002;</li>
+<li><p>&#x6253;&#x5F00;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5305;&#xFF0C;&#x5E76;&#x70B9;&#x51FB; &#x201C;Proceed&#x201D;&#x3002;
+<img src="../res/socialmed3.png" alt="socialmed3.png"></p>
+<p>&#x8BE5;&#x5305;&#x7684;&#x62A5;&#x544A;&#x5728; MicroStrategy &#x662F;&#x53EF;&#x7528;&#x7684;&#x3002;</p>
+</li>
+</ol>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5728; MicroStrategy &#x4E2D;&#x6D4B;&#x8BD5;&#x548C;&#x4FEE;&#x6539;&#x62A5;&#x544A;&#x3002;&#x914D;&#x7F6E;&#x6743;&#x9650;&#x662F;&#x5FC5;&#x9700;&#x7684;&#x3002;</p>
+<h2 id="&#x66F4;&#x65B0;-schema">&#x66F4;&#x65B0; Schema</h2>
+<ol>
+<li>&#x5728; MicroStrategy &#x4E2D;&#xFF0C;&#x9009;&#x62E9; &#x201C;Schema &gt; Update Schema&#x201D;&#x3002;</li>
+<li><p>&#x5728; Schema &#x66F4;&#x65B0;&#x4E2D;&#xFF0C;&#x9009;&#x62E9;&#x6240;&#x6709;&#x7684;&#x52FE;&#x9009;&#x9879;&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB; &#x201C;Update&#x201D;&#x3002;</p>
+<p><img src="../res/socialmed4.png" alt="socialmed4.png"></p>
+</li>
+</ol>
+<h2 id="&#x521B;&#x5EFA;&#x7528;&#x6237;&#x5E76;&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;">&#x521B;&#x5EFA;&#x7528;&#x6237;&#x5E76;&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;</h2>
+<ol>
+<li>&#x6DFB;&#x52A0;&#x7BA1;&#x7406;&#x5458;&#x3002;</li>
+<li>&#x6DFB;&#x52A0;&#x7528;&#x6237;&#x7BA1;&#x7406;&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB; &#x201C;Everyone&#x201D;&#x3002;</li>
+<li>&#x53BB;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x6216;&#x8005;&#x70B9;&#x51FB; &#x201C;Administrator&#x201D; &#x53BB;&#x7F16;&#x8F91;&#x5BC6;&#x7801;&#x3002;</li>
+</ol>
+<h2 id="&#x5173;&#x4E8E;&#x62A5;&#x544A;">&#x5173;&#x4E8E;&#x62A5;&#x544A;</h2>
+<p>&#x8FD9;&#x5305;&#x4E2D;&#x6709; 18 &#x4E2D;&#x62A5;&#x544A;&#x3002;&#x5927;&#x591A;&#x6570;&#x62A5;&#x544A;&#x4F60;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x65E5;&#x671F;&#x8303;&#x56F4;&#xFF0C;&#x8F93;&#x51FA;&#x9650;&#x5236;&#xFF0C;&#x548C;&#x4E00;&#x4E9B;&#x6761;&#x4EF6;&#x9650;&#x5236;&#x3002;&#x5305;&#x6DB5;&#x76D6;&#x7684;&#x62A5;&#x544A;&#x4E3B;&#x8981;&#x6709;&#x4E09;&#x79CD;&#xFF1A;</p>
+<ul>
+<li>&#x4F53;&#x79EF;&#xFF1A;&#x4E00;&#x4E9B;&#x62A5;&#x544A;&#x663E;&#x793A;&#xFF0C;&#x5FAE;&#x535A;&#x603B;&#x4F53;&#x79EF;&#x4E0D;&#x540C;&#x7684;&#x65E5;&#x671F;&#x548C;&#x6807;&#x8BB0;&#x3002;</li>
+<li>&#x9876;&#x90E8;&#x5217;&#x8868;&#xFF1A;&#x663E;&#x793A;&#x9876;&#x90E8;&#x7684;&#x5FAE;&#x535A;&#xFF0C;&#x8F6C;&#x53D1;&#xFF0C;&#x6807;&#x7B7E;&#x548C;&#x7528;&#x6237;&#x3002;</li>
+<li>&#x5177;&#x4F53;&#x6761;&#x4EF6;&#xFF1A;&#x5FAE;&#x535A;&#x8F6C;&#x53D1;&#xFF0C;&#x53EF;&#x4EE5;&#x6D4B;&#x91CF;&#x6216;&#x5217;&#x51FA;&#x5FAE;&#x535A;&#x672C;&#x8EAB;&#x7684;&#x6587;&#x672C;&#x3002;</li>
+</ul>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x62F7;&#x8D1D;&#x548C;&#x4FEE;&#x6539;&#x62A5;&#x544A;&#x6216;&#x8005;&#x4F7F;&#x7528;&#x62A5;&#x544A;&#x4F5C;&#x4E3A;&#x6A21;&#x7248;&#xFF0C;&#x5230; Drill &#x4E2D;&#x53BB;&#x67E5;&#x8BE2; Twitter &#x7684;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x8FDB;&#x5165;&#x5230;&#x62A5;&#x544A;&#xFF0C;MicroStrategy &#x7684;&#x5F00;&#x53D1;&#x8005;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x6BD4; Web &#x754C;&#x9762;&#x4FEE;&#x6539;&#x62A5;&#x544A;&#xFF0C;&#x6216;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x62A5;&#x544A;&#x66F4;&#x5F3A;&#x5927;&#x7684;&#x754C;&#x9762;&#xFF0C;&#x4F46;&#x662F;&#x9700;&#x8981; RDP &#x8FDB;&#x5165;&#x5230;&#x8282;&#x70B9;&#x3002;</p>
+<h2 id="&#x4F7F;&#x7528;-web-&#x63A5;&#x53E3;">&#x4F7F;&#x7528; Web &#x63A5;&#x53E3;</h2>
+<ol>
+<li>&#x4F7F;&#x7528; Web &#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x8F93;&#x5165; URL &#x63A5;&#x53E3;&#x5730;&#x5740;&#xFF1A;<pre><code>http:///MicroStrategy/asp/Main.aspx
+</code></pre></li>
+<li>&#x521B;&#x5EFA;&#x7528;&#x6237;&#x6216;&#x8005;&#x4F5C;&#x4E3A;&#x7BA1;&#x7406;&#x5458;&#x767B;&#x5F55;&#xFF0C;&#x4F7F;&#x7528;&#x6700;&#x521D;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x521B;&#x5EFA;&#x7684;&#x8BC1;&#x4E66;&#x3002;</li>
+<li><p>&#x5728;&#x6B22;&#x8FCE; MicroStrategy &#x7684; Web &#x754C;&#x9762;&#x4E0A;&#xFF0C;&#x9009;&#x62E9;&#x4F60;&#x4F7F;&#x7528;&#x8FC7;&#x7684;&#x9879;&#x76EE;&#x5305;&#xFF1A;&#x201C;Drill Twitter Analysis&#x201D;&#x3002;</p>
+<p><img src="../res/socialmed5.png" alt="socialmed5.png"></p>
+</li>
+<li><p>&#x9009;&#x62E9; &#x201C;Shared Reports&#x201D;&#x3002;&#x51FA;&#x73B0;&#x4E09;&#x79CD;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x3002;</p>
+<p><img src="../res/socialmed6.png" alt="socialmed6.png"></p>
+</li>
+<li><p>&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x62A5;&#x8868;&#xFF0C;&#x5E76;&#x54CD;&#x5E94;&#x4EFB;&#x4F55;&#x63D0;&#x793A;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6309;&#x65E5;&#x671F;&#x8303;&#x56F4;&#x8FD0;&#x884C;&#x9876;&#x63A8;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x8F93;&#x5165;&#x6240;&#x9700;&#x7684;&#x5F00;&#x59CB;&#x65E5;&#x671F;&#x548C;&#x7ED3;&#x675F;&#x65E5;&#x671F;&#x3002;</p>
+<p><img src="../res/socialmed7.png" alt="socialmed7.png"></p>
+</li>
+<li><p>&#x70B9;&#x51FB; &#x201C;Run Report&#x201D;&#x3002;
+&#x4E00;&#x4E2A;&#x76F4;&#x65B9;&#x56FE;&#x62A5;&#x544A;&#x663E;&#x793A;&#x65E5;&#x671F;&#x8303;&#x56F4;&#x9876;&#x63A8;&#x7684;&#x8BED;&#x8A00;&#x3002;</p>
+<p><img src="../res/socialmed8.png" alt="socialmed8.png"></p>
+</li>
+<li>&#x5237;&#x65B0;&#x6570;&#x636E;&#x6216;&#x91CD;&#x65B0;&#x8F93;&#x5165;&#x63D0;&#x793A;&#x503C;&#xFF0C;&#x9009;&#x62E9; &#x201C;Data &gt; Refresh&#x201D; &#x6216;&#x8005; &#x201C;Data &gt; Re-prompt&#x201D;&#x3002;</li>
+</ol>
+<h2 id="&#x6D4F;&#x89C8;-drill-&#x5206;&#x6790;&#x7684;-twitter-&#x62A5;&#x8868;">&#x6D4F;&#x89C8; Drill &#x5206;&#x6790;&#x7684; Twitter &#x62A5;&#x8868;</h2>
+<p>MicroStrategy &#x5F00;&#x53D1;&#x62A5;&#x8868;&#x662F;&#x4F4D;&#x4E8E;&#x9879;&#x76EE;&#x7684;&#x516C;&#x5171;&#x76EE;&#x5F55;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x53BB;&#x5B89;&#x88C5;&#x8BE5;&#x5305;&#x3002;</p>
+<p><img src="../res/socialmed9.png" alt="socialmed9.png"></p>
+<p>&#x8BB8;&#x591A;&#x62A5;&#x544A;&#x8981;&#x6C42;&#x4F60;&#x54CD;&#x5E94;&#x63D0;&#x793A;&#x9009;&#x62E9;&#x6240;&#x9700;&#x7684;&#x6570;&#x636E;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x9009;&#x62E9;&#x5728;&#x53F3;&#x680F;&#x7684;&#x9876;&#x90E8;&#x6807;&#x7B7E;&#x62A5;&#x544A;&#x3002;&#x672C;&#x62A5;&#x544A;&#x8981;&#x6C42;&#x4F60;&#x54CD;&#x5E94;&#x5F00;&#x59CB;&#x65E5;&#x671F;&#x548C;&#x7ED3;&#x675F;&#x65E5;&#x671F;&#xFF0C;&#x5E76;&#x6307;&#x5B9A;&#x65E5;&#x671F;&#x8303;&#x56F4;&#x5185;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x6570;&#x636E;&#xFF1B;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6570;&#x636E;&#x4F1A;&#x9009;&#x62E9;&#x6700;&#x8FD1;&#x4E24;&#x4E2A;&#x6708;&#xFF0C;&#x5230;&#x5F53;&#x524D;&#x65E5;&#x671F;&#x4E3A;&#x6B62;&#x3002;&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x8981;&#x8FD4;&#x56DE;&#x9876;&#x90E8;&#x6807;&#x7B7E;&#x6570;&#x636E;&#x7684;&#x9650;&#x5236;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x6700;&#x9876;&#x7AEF;&#x7684; 10 &#x4E2A;&#x6807;&#x7B7E;&#x3002;</p>
+<p><img src="../res/socialmed10.png" alt="socialmed10.png"></p>
+<p>&#x5F53;&#x4F60;&#x70B9;&#x51FB; &#x201C;Finish&#x201D;&#xFF0C;&#x6309;&#x7167;&#x4E0D;&#x540C;&#x6807;&#x7B7E;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x67F1;&#x72B6;&#x7684;&#x62A5;&#x8868;&#x3002;</p>
+<p><img src="../res/socialmed11.png" alt="socialmed11.png"></p>
+<p>&#x5176;&#x4ED6;&#x7684;&#x53EF;&#x7528;&#x529F;&#x80FD;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x62A5;&#x8868;&#x6309;&#x5C0F;&#x65F6;&#x5C55;&#x793A;&#xFF1A;</p>
+<p><img src="../res/socialmed12.png" alt="socialmed12.png"></p>
+<p>&#x8BE5;&#x62A5;&#x8868;&#x5C55;&#x793A;&#x8F6C;&#x53D1;&#x5728;&#x6307;&#x5B9A;&#x65E5;&#x671F;&#x8303;&#x56F4;&#x7684;&#x539F;&#x59CB;&#x6D88;&#x606F;&#x7684;&#x7EDF;&#x8BA1;&#x3002;</p>
+<p><img src="../res/socialmed13.png" alt="socialmed13.png"></p>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<p>&#x8BE5;&#x6559;&#x7A0B;&#xFF0C;&#x4F60;&#x5B66;&#x4F1A;&#x4E86;&#x5982;&#x4F55;&#x4F7F;&#x7528; Apache Flume &#x53BB;&#x914D;&#x7F6E; Twitter &#x6570;&#x636E;&#x3002;&#x4F60;&#x4E5F;&#x5B66;&#x4F1A;&#x4E86;&#x5982;&#x4F55;&#x4F7F;&#x7528; Apache Drill &#x5229;&#x7528; SQL &#x53BB;&#x5206;&#x6790;&#x539F;&#x751F;&#x7684; JSON &#x683C;&#x5F0F;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x4E14;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x4F7F;&#x7528; MicroStrategy &#x53BB;&#x5206;&#x6790;&#x548C;&#x751F;&#x6210;&#x62A5;&#x8868;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; http://drill.smartloli.org 2016 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Modify: 
+2016-01-11 18:47:27
+</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../3.教程/5.高度动态的数据集分析.html" class="navigation navigation-prev " aria-label="Previous page: 5.高度动态的数据集分析"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../3.教程/7.使用窗口函数分析数据.html" class="navigation navigation-next " aria-label="Next page: 7.使用窗口函数分析数据"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-baidu/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"tbfed-pagefooter":{"copyright":"Copyright &copy http://drill.smartloli.org 2016","modify_label":"Modify: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"baidu":{"token":""},"fontsettings":{"size":1,"theme":"white","family":"sans"},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        <script>var _hmt = _hmt || [];(function() {var hm = document.createElement('script');hm.src = '//hm.baidu.com/hm.js?';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(hm, s);})();</script>
+    </body>
+    
+</html>
