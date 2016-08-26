@@ -18,7 +18,7 @@
   ],
   "pluginsConfig": {
     "tbfed-pagefooter": {
-      "copyright": "Copyright &copy http://drill.smartloli.org 2016",
+      "copyright": "Copyright &copy <a href='http://drill.smartloli.org'>smartloli</a> 2016",
       "modify_label": "Modify: ",
       "modify_format": "YYYY-MM-DD HH:mm:ss"
     },
